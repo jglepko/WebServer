@@ -1,0 +1,57 @@
+// Request
+
+Clark Elliott's Port listener running at 2540.
+
+GET /dog.txt HTTP/1.1
+Host: localhost:2540
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:62.0) Gecko/20100101 Firefox/62.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+
+// Response
+
+HTTP/1.1 404 Not Found
+Date: Mon, 08 Oct 2018 02:45:52 GMT
+Server: Apache/2.2.3 (Red Hat)
+Content-Length: 213
+Content-Type: text/html; charset=iso-8859-1
+Connection: close
+
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html><head>
+<title>404 Not Found</title>
+</head><body>
+
+*********************************************************
+
+// Request
+
+GET /cat.html HTTP/1.1
+Host: localhost:2540
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:62.0) Gecko/20100101 Firefox/62.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+
+// Response
+
+HTTP/1.1 302 Found
+Date: Mon, 08 Oct 2018 02:49:50 GMT
+Server: Apache/2.2.3 (Red Hat)
+Location: http://condor.depaul.edu/cat.html/
+Content-Length: 218
+Connection: close
+Content-Type: text/html; charset=iso-8859-1
+
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html><head>
+<title>302 Found</title>
+</head><body>
+<h1>Found</h1>
+<p>The document has moved <a href="http://condor.depaul.edu/cat.html/">here</a>.</p>
+</body></html>
